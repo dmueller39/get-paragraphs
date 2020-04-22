@@ -1,0 +1,27 @@
+{
+  "name": "y",
+  "version": "y",
+  "description": "testing",
+  "main": "lib/index.js",
+  "author": "dmueller39",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "babel src/ -d lib/",
+    "prepublish": "yarn run build",
+    "test": "yarn run build && node ./lib/index.js http://paulgraham.com/useful.html",
+    "web": "yarn run build && node ./lib/index.js ",
+    "rss": "yarn run build && node ./lib/index.js --rss "
+  },
+  "devDependencies": {
+    "@babel/preset-flow": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.85.0"
+  },
+  "dependencies": {
+    "request": "^2.88.2",
+    "xmldom": "^0.1.27"
+  }
+}
